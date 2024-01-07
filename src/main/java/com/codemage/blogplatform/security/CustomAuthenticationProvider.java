@@ -13,14 +13,17 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 public class CustomAuthenticationProvider implements AuthenticationProvider {
 
-    @Autowired
     private UserDetailsService userDetailsService;
 
-    @Autowired
     private PasswordEncoder passwordEncoder;
 
-    @Autowired
-    private Environment environment;
+    public void setUserDetailsService(UserDetailsService userDetailsService) {
+        this.userDetailsService = userDetailsService;
+    }
+
+    public void setPasswordEncoder(PasswordEncoder passwordEncoder) {
+        this.passwordEncoder = passwordEncoder;
+    }
 
     @Override
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {

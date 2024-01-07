@@ -1,10 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Login V8</title>
     <meta charset="UTF-8">
-    <title>Register</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/css/util.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <!--===============================================================================================-->
 </head>
 <body>
+
+<div class="limiter">
+    <div class="container-login100">
+        <div class="wrap-login100">
+            <form method="POST" th:object="${user}" action="/register" class="login100-form validate-form p-l-55 p-r-55 p-t-178">
+                <span class="login100-form-title">Register</span>
+
+                <div class="wrap-input100 validate-input m-b-16">
+                    <input th:class="'input100 ' + ${#fields.hasErrors('firstName') ? 'input__err' : ''} " type="text" th:field="*{firstName}" placeholder="Firstname">
+                    <p class="txt_error" th:each="error: ${#fields.errors('firstName')}" th:text="${error}"></p>
+                </div>
+                <div class="wrap-input100 validate-input m-b-16">
+                    <input th:class="'input100 ' + ${#fields.hasErrors('lastName') ? 'input__err' : ''} " type="text" th:field="*{lastName}" placeholder="Lastname">
+                    <p class="txt_error" th:each="error: ${#fields.errors('lastName')}" th:text="${error}"></p>
+                </div>
+                <div class="wrap-input100 validate-input m-b-16">
+                    <input th:class="'input100 ' + ${#fields.hasErrors('email') ? 'input__err' : ''} " type="text" th:field="*{email}" placeholder="Email">
+                    <p class="txt_error" th:each="error: ${#fields.errors('email')}" th:text="${error}"></p>
+                </div>
+                <div class="wrap-input100 validate-input m-b-16">
+                    <input th:class="'input100 ' + ${#fields.hasErrors('username') ? 'input__err' : ''} " type="text" th:field="*{username}" placeholder="Username">
+                    <p class="txt_error" th:each="error: ${#fields.errors('username')}" th:text="${error}"></p>
+                </div>
+
+                <div class="wrap-input100 validate-input m-b-16">
+                    <input th:class="'input100 ' + ${#fields.hasErrors('password') ? 'input__err' : ''} " type="password" th:field="*{password}" placeholder="Password">
+                    <p class="txt_error" th:each="error: ${#fields.errors('password')}" th:text="${error}"></p>
+                </div>
+                <div class="wrap-input100 validate-input m-b-16">
+                    <input th:class="'input100 ' + ${#fields.hasErrors('matchingPassword') ? 'input__err' : ''} " type="password" th:field="*{matchingPassword}" placeholder="Re-enter password">
+                    <p class="txt_error" th:each="error: ${#fields.errors('matchingPassword')}" th:text="${error}"></p>
+                </div>
+                <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+
+                <div class="container-login100-form-btn">
+                    <button class="login100-form-btn">
+                        Register
+                    </button>
+                </div>
+
+                <div class="flex-col-c p-t-10 p-b-10">
+						<span class="txt1 p-b-9">
+							Have an account?
+						</span>
+
+                    <a href="/login" class="txt3">
+                        Login
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>

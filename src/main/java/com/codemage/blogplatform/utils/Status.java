@@ -1,2 +1,8 @@
-package com.codemage.blogplatform.utils;public enum Status {
+package com.codemage.blogplatform.utils;
+
+public enum Status {
+    ACTIVE,
+    INACTIVE,
+    PENDING,
+    EXPIRED
 }
