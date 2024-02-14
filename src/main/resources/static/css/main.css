@@ -4,66 +4,66 @@
 [ RESTYLE TAG ]*/
 
 :root {
-  --primary-color: #0046d5;
+  --primary-color: #285fd0;
 }
 
 * {
-	margin: 0px; 
-	padding: 0px; 
-	box-sizing: border-box;
-    font-family: 'Ubuntu', sans-serif;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 body, html {
-	height: 100%;
+  height: 100%;
 }
 
 /*---------------------------------------------*/
 a {
-	font-size: 14px;
-	line-height: 1.7;
-	color: #666666;
-	margin: 0px;
-	transition: all 0.4s;
-	-webkit-transition: all 0.4s;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #666666;
+  margin: 0px;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
   -moz-transition: all 0.4s;
 }
 
 a:focus {
-	outline: none !important;
+  outline: none !important;
 }
 
 a:hover {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 p {
-	font-size: 14px;
-	line-height: 1.7;
-	color: #666666;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #666666;
 }
 
 ul, li {
-	list-style-type: none;
+  list-style-type: none;
 }
 
 
 /*---------------------------------------------*/
 input {
-	outline: none;
-	border: none;
+  outline: none;
+  border: none;
 }
 
 input[type="number"] {
-    -moz-appearance: textfield;
-    appearance: none;
-    -webkit-appearance: none;
+  -moz-appearance: textfield;
+  appearance: none;
+  -webkit-appearance: none;
 }
 
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
+  -webkit-appearance: none;
 }
 
 textarea {
@@ -88,17 +88,17 @@ textarea:-ms-input-placeholder { color: #1b3815;}
 
 /*---------------------------------------------*/
 button {
-	outline: none !important;
-	border: none;
-	background: transparent;
+  outline: none !important;
+  border: none;
+  background: transparent;
 }
 
 button:hover {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 iframe {
-	border: none !important;
+  border: none !important;
 }
 
 /*//////////////////////////////////////////////////////////////////
@@ -133,7 +133,7 @@ iframe {
 }
 
 .container-login100 {
-  width: 100%;  
+  width: 100%;
   min-height: 100vh;
   display: -webkit-box;
   display: -webkit-flex;
@@ -207,7 +207,7 @@ iframe {
   width: 100%;
   height: 55px;
   background: #ebebeb;
-  border-radius: 27px;
+  border-radius: 10px;
   padding: 0 35px 0 35px;
 }
 
@@ -225,33 +225,6 @@ iframe {
 
 /*------------------------------------------------------------------
 [ Focus Input ]*/
-
-.focus-input100 {
-  display: block;
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  transform: translateX(-50%);
-  border-radius: 31px;
-  background-color: #ebebeb;
-  pointer-events: none;
-  
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  transition: all 0.4s;
-}
-
-.input100:focus + .focus-input100 {
-  width: calc(100% + 20px);
-}
 
 /*------------------------------------------------------------------
 [ Button ]*/
@@ -278,7 +251,7 @@ iframe {
   width: 100%;
   height: 50px;
   background-color: var(--primary-color);
-  border-radius: 25px;
+  border-radius: 10px;
   font-weight: bold;
   font-size: 15px;
   color: #fff;
@@ -465,4 +438,242 @@ iframe {
 .custom_li {
   list-style-type: circle;
   color: #ff3737;
+}
+
+.fab-icon {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: rgba(0,0,0,0.1);
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  background: white;
+  text-decoration: none;
+}
+
+.container {
+  padding: 16px 16px;
+  height: 100%;
+}
+
+.txt-new-blog {
+  color: #1b1e21;
+  margin-bottom: 16px;
+}
+
+.blog_content {
+  width: 100%;
+  height: 750px;
+  resize: vertical; /* Allow vertical resizing */
+  overflow-y: auto; /* Enable vertical scrolling when content overflows */
+  font-size: 15px;
+  line-height: 1.2;
+  position: relative;
+  display: block;
+  background: #ebebeb;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  width: 5px;
+  background: var(--primary-color);
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.file-upload-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px; /* Set the desired height for the container */
+  border: 1px dashed #ccc;
+  color: #333;
+  font-size: 18px;
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  background: transparent;
+}
+
+/* Hide the default file input */
+.file-upload-input {
+  display: none;
+}
+
+/* Style the text inside the container */
+.file-upload-label {
+  margin-top: 10px;
+}
+
+.file-upload-container:hover {
+  border-color: transparent;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.blog_additional_information {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 16px;
+}
+
+.additional_information {
+  width: 100%;
+  height: 100%;
+  resize: vertical; /* Allow vertical resizing */
+  overflow-y: auto; /* Enable vertical scrolling when content overflows */
+  font-size: 15px;
+  line-height: 1.2;
+  position: relative;
+  display: block;
+  border: 1px solid #ebebeb;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.additional_information:hover {
+  border: 1px solid #ebebeb;
+}
+
+.create-button {
+  background: var(--primary-color);
+  padding: 16px;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  outline: 0;
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0px 1px 1px 1px rgba(0,0,0,0.1);
+  font-weight: bold;
+}
+
+.preview-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -100;
+  border-radius: 10px;
+}
+
+.nav li {
+  padding: 5px 20px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  position: relative;
+  width: 100%;
+}
+
+.nav li::before {
+  width: 0%;
+  position: absolute;
+  right: 15px;
+  bottom: 0;
+  height: 1px;
+  content: "";
+  background: var(--primary-color);
+  transition: all 0.5s ease;
+}
+
+.nav li:hover::before, .nav li.active::before {
+  width: calc(100% - 30px);
+}
+
+.nav li::after {
+  width: calc(100% - 30px);
+  position: absolute;
+  right: 15px;
+  bottom: 0;
+  height: 1px;
+  content: "";
+  background: #dddddd;
+  transition: all 0.5s ease;
+}
+
+.nav li:hover::after, .nav li.active::after {
+  width: 0%;
+}
+
+.nav li p {
+  font-size: 17px;
+}
+
+.nav li:hover p, .nav li.active p {
+  color: var(--primary-color);
+}
+
+.text-wrapper {
+  width: 200px;
+  height: 30px;
+  position: relative;
+  background: white;
+  display: none;
+}
+
+.shimmer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, #f0f0f0, transparent);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.content-shimmers {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.content-shimmer {
+  width: 100%;
+  height: 30px;
+  background: white;
+}
+
+.center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }

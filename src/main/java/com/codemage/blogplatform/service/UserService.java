@@ -6,8 +6,9 @@ import com.codemage.blogplatform.repositories.RoleRepository;
 import com.codemage.blogplatform.repositories.UserRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-@Component("prototype")
+@Service("prototype")
 public class UserService {
 
     private final UserRepository userRepository;
@@ -20,10 +21,11 @@ public class UserService {
         this.passwordEncoder = passwordEncoder;
     }
 
-    public void register(UserDTO userDTO) {
+    public User register(UserDTO userDTO) {
         User user = userDTO.toUser();
         user.setPassword(passwordEncoder.encode(userDTO.getPassword()));
         user.setRoles(roleRepository.getDefaultRoles().orElse(null));
         userRepository.save(user);
+        return user;
     }
 }

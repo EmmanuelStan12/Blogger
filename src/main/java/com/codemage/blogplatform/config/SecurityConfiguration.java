@@ -46,7 +46,9 @@ public class SecurityConfiguration {
                         .maxSessionsPreventsLogin(true)
                 )
                 .authorizeHttpRequests((authorize) ->
-                        authorize.requestMatchers(Route.DASHBOARD).hasAuthority(Roles.ADMIN)
+                        authorize
+                                .requestMatchers(Route.DASHBOARD).hasAuthority(Roles.ADMIN)
+                                .requestMatchers(Route.BLOG).hasAuthority(Roles.ADMIN)
                                 .anyRequest().permitAll()
                 )
                 .logout((logout) -> logout
